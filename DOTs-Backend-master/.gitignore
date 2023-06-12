@@ -1,0 +1,9 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.vs/ImpactMeasurementAPI/v17/.suo
+.vs/ImpactMeasurementAPI/config/applicationhost.config
+.vs/ImpactMeasurementAPI/DesignTimeBuild/.dtbcache.v2
+.vs/ImpactMeasurementAPI/v17/.futdcache.v1
