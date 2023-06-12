@@ -8,6 +8,7 @@ namespace ImpactMeasurementAPI.Mapper
     {
         class Calculator
         {
+            //Easy function to get the square of a number
             public double GetSquare(double number)
             {
                 return number * number;
@@ -16,11 +17,13 @@ namespace ImpactMeasurementAPI.Mapper
         Calculator math = new Calculator();
         public List<MomentarilyAccelerationWithPlayerLoad> MapMomentarilyAccelerationToMomentarilyAccelerationWithPlayerLoad(List<MomentarilyAcceleration> momentarilyAccelerations)
         {
+            //Create a List of the new object
             List<MomentarilyAccelerationWithPlayerLoad> momentarilyAccelerationWithPlayerLoads = new List<MomentarilyAccelerationWithPlayerLoad>();
 
             for (int i = 0; i < momentarilyAccelerations.Count; i++)
             {
-                if (i > 1)
+                //if there is a previous acceleration
+                if (i > 1) 
                 {
                     MomentarilyAccelerationWithPlayerLoad accelerationWithPlayerLoad = new MomentarilyAccelerationWithPlayerLoad()
                     {
@@ -39,8 +42,8 @@ namespace ImpactMeasurementAPI.Mapper
                     momentarilyAccelerationWithPlayerLoads.Add(accelerationWithPlayerLoad);
                 }
 
-
-                else
+                //If there isn't a previous acceleration you don't have to subtract anything
+                else 
                 {
                     MomentarilyAccelerationWithPlayerLoad accelerationWithPlayerLoad = new MomentarilyAccelerationWithPlayerLoad()
                     {

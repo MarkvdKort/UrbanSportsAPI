@@ -31,9 +31,7 @@ namespace ImpactMeasurementAPI.Data
         }
         public IEnumerable<MomentarilyAccelerationWithPlayerLoad> GetAllFreeAccelerationValuesWithPlayerLoadFromSession(int id)
         {
-            //return _context.MomentarilyAccelerations
-            //    .Where(c => c.TrainingSessionId == id)
-            //    .ToList();
+            //Get the freeacclerationvalues out of the database and map them to an object with the player load calculated
             MomentarilyAccelerationMapper momentarilyAccelerationMapper = new MomentarilyAccelerationMapper();
             return momentarilyAccelerationMapper.MapMomentarilyAccelerationToMomentarilyAccelerationWithPlayerLoad(_context.MomentarilyAccelerations
                 .Where(c => c.TrainingSessionId == id)
