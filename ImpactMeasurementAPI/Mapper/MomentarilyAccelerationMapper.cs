@@ -51,7 +51,10 @@ namespace ImpactMeasurementAPI.Mapper
                         TrainingSession = momentarilyAccelerations[i].TrainingSession,
                         TrainingSessionId = momentarilyAccelerations[i].TrainingSessionId,
                         Frame = momentarilyAccelerations[i].Frame,
-                        PlayerLoad = Math.Sqrt((math.GetSquare(Convert.ToInt32((momentarilyAccelerations[i].AccelerationX))) + math.GetSquare(Convert.ToInt32((momentarilyAccelerations[i].AccelerationY ))) + math.GetSquare(Convert.ToInt32((momentarilyAccelerations[i].AccelerationZ)))))
+                        PlayerLoad =
+                        Math.Sqrt((math.GetSquare((momentarilyAccelerations[i].AccelerationX))
+                        + math.GetSquare(momentarilyAccelerations[i].AccelerationY)
+                        + math.GetSquare(momentarilyAccelerations[i].AccelerationZ)))
                     };
                     momentarilyAccelerationWithPlayerLoads.Add(accelerationWithPlayerLoad);
                 }
