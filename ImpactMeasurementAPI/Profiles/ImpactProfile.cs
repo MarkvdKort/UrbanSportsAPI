@@ -56,6 +56,7 @@ namespace ImpactMeasurementAPI.Profiles
                 .ForMember(dest => dest.ImpactDirectionZ,
                     opt => opt.MapFrom(src => src.ImpactDirectionZ));
             CreateMap<MomentarilyAcceleration, ReadFreeAcceleration>();
+            CreateMap<MomentarilyAccelerationWithPlayerLoad, ReadFreeAccelerationWithPlayerLoad>();
         }
     }
 }

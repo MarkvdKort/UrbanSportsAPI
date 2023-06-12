@@ -8,7 +8,7 @@ namespace ImpactMeasurementAPI.Data
         bool SaveChanges();
 
         IEnumerable<MomentarilyAcceleration> GetAllFreeAccelerationValuesFromSession(int id);
-
+        IEnumerable<MomentarilyAccelerationWithPlayerLoad> GetAllFreeAccelerationValuesWithPlayerLoadFromSession(int id);
         Impact GetHighestForceOfImpactFromSession(int id);
 
         IEnumerable<Impact> GetAllImpactDataFromSession(int id);

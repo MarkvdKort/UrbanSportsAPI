@@ -265,6 +265,18 @@ namespace ImpactMeasurementAPI.Controllers
 
             return NotFound();
         }
+        [HttpGet("accelerationwithplayerload/all/{trainingSessionId}", Name = "GetAllFreeAccelerationsWithPlayerLoad")]
+        public ActionResult<IEnumerable<ReadFreeAccelerationWithPlayerLoad>> GetFreeAccelerationWithPlayerLoad(int trainingSessionId)
+        {
+            var freeAcceleration = _freeAccelerationRepository.GetAllFreeAccelerationValuesWithPlayerLoadFromSession(trainingSessionId);
+
+            if (freeAcceleration != null && freeAcceleration.Count() != 0)
+            {
+                return Ok(_mapper.Map<IEnumerable<ReadFreeAccelerationWithPlayerLoad>>(freeAcceleration));
+            }
+
+            return NotFound();
+        }
 
 
         private bool TrainingSessionExists(int id)

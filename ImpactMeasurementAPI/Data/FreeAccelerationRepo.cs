@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ImpactMeasurementAPI.Logic;
+using ImpactMeasurementAPI.Mapper;
 using ImpactMeasurementAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,7 +29,16 @@ namespace ImpactMeasurementAPI.Data
                 .Where(c => c.TrainingSessionId == id)
                 .ToList();
         }
-
+        public IEnumerable<MomentarilyAccelerationWithPlayerLoad> GetAllFreeAccelerationValuesWithPlayerLoadFromSession(int id)
+        {
+            //return _context.MomentarilyAccelerations
+            //    .Where(c => c.TrainingSessionId == id)
+            //    .ToList();
+            MomentarilyAccelerationMapper momentarilyAccelerationMapper = new MomentarilyAccelerationMapper();
+            return momentarilyAccelerationMapper.MapMomentarilyAccelerationToMomentarilyAccelerationWithPlayerLoad(_context.MomentarilyAccelerations
+                .Where(c => c.TrainingSessionId == id)
+                .ToList());
+        }
         public Impact GetHighestForceOfImpactFromSession(int id)
         {
             return GetAllImpactDataFromSession(id)
