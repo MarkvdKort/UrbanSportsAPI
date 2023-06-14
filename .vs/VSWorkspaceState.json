@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ImpactMeasurementAPI",
+    "\\ImpactMeasurementAPI\\Logic",
+    "\\ImpactMeasurementAPI\\Mapper"
   ],
-  "SelectedNode": "\\ImpactMeasurementAPI.sln",
+  "SelectedNode": "\\ImpactMeasurementAPI\\Logic\\CsvReader.cs",
   "PreviewInSolutionExplorer": false
 }

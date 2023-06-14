@@ -12,6 +12,7 @@ namespace ImpactMeasurementAPI.Profiles
 
             CreateMap<CreateAthlete, Athlete>();
             CreateMap<Athlete, ReadAthlete>();
+            CreateMap<CounterMovementJump, ReadCounterMovementJump>();
             CreateMap<CreateTrainingSession, TrainingSession>()
                 .ForMember(dest => dest.StartingTime,
                     opt => opt.MapFrom(src => src.StartingTime))
