@@ -23,7 +23,7 @@ namespace ImpactMeasurementAPI.Logic
         private void Initialize()
         {
             var connectionString =
-                "Server=host.docker.internal;port=3306;Database=test;Uid=root;Pwd=my_secret_password;";
+                "Server=host.docker.internal;port=3307;Database=test;Uid=root;Pwd=my_secret_password;";
             connection = new MySqlConnection(connectionString);
         }
 
