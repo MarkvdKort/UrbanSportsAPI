@@ -46,7 +46,7 @@ namespace ImpactMeasurementAPI.Data
         public DbSet<Sport> Sports { get; set; }
         public DbSet<Athlete> Athletes { get; set; }
         public DbSet<Impact> Impacts { get; set; }
-        public DbSet<CounterMovementJump> CounterMovementJumps { get; set; }
+        public DbSet<CounterMovementJump> CounterMovementJump { get; set; }
 
 
     }

@@ -6,6 +6,6 @@ namespace ImpactMeasurementAPI.Models
     {
         [Required] public int Id { get; set; }
 
-        [Required] public decimal Acc_Y { get; set; }
+        [Required] public decimal Acc_Z { get; set; }
     }
 }

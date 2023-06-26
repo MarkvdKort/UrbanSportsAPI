@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
 
-        public decimal Acc_Y { get; set; }
+        public decimal Acc_Z { get; set; }
     }
 }

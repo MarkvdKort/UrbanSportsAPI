@@ -7,6 +7,6 @@
     "\\ImpactMeasurementAPI\\Logic",
     "\\ImpactMeasurementAPI\\Mapper"
   ],
-  "SelectedNode": "\\ImpactMeasurementAPI\\Controllers\\ImpactController.cs",
+  "SelectedNode": "\\ImpactMeasurementAPI\\Logic\\CsvReader.cs",
   "PreviewInSolutionExplorer": false
 }

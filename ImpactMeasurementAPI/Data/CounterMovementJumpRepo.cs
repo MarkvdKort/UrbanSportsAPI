@@ -15,7 +15,7 @@ namespace ImpactMeasurementAPI.Data
 
         public IEnumerable<CounterMovementJump> GetAllCounterMovementJumps()
         {
-            return _context.CounterMovementJumps
+            return _context.CounterMovementJump
                 .ToList();
         }
     }
